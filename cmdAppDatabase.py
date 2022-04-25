@@ -10,14 +10,16 @@ import os
 # 命令-应用程序路径 文本数据库
 
 # 添加数据
-
 def add_to_file(cmd, path):
-    f = open(r'./textDatabase/cmd_app.text', 'a', encoding='UTF-8')
-    f.write(cmd + '->' + path + '\n')
-    f.close()
+    print(cmd, path)
+    if cmd is '' or path is '':
+        print("路径选择为空！")
+    else:
+        f = open(r'./textDatabase/cmd_app.text', 'a', encoding='UTF-8')
+        f.write(cmd + '->' + path + '\n')
+        f.close()
 
-# 获取数据
-
+# 获取命令数据
 def get_as_dic() -> dict:
     # cmd_apppath 键值对
     dic = {}

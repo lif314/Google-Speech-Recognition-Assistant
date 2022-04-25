@@ -8,7 +8,7 @@ import os
 
 import speech_recognition as sr
 
-from CmdAppDatabase import get_as_dic
+from cmdAppDatabase import get_as_dic
 
 
 # obtain audio from the microphone

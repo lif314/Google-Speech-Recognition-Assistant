@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>522</width>
-    <height>328</height>
+    <width>505</width>
+    <height>302</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,65 +57,8 @@ color: rgb(0, 170, 255);
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>78</width>
-             <height>48</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="addButton">
-           <property name="text">
-            <string>添加</string>
-           </property>
-           <property name="autoDefault">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="add_2">
-           <property name="text">
-            <string>语音命令(英语):</string>
-           </property>
-           <property name="indent">
-            <number>-1</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="cmdText"/>
-         </item>
-        </layout>
-       </item>
        <item row="1" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,5,1">
          <item alignment="Qt::AlignLeft">
           <widget class="QLabel" name="add_3">
            <property name="enabled">
@@ -150,6 +93,76 @@ color: rgb(0, 170, 255);
             <string notr="true">...</string>
            </property>
           </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,6">
+         <item>
+          <widget class="QLabel" name="add_2">
+           <property name="text">
+            <string>语音命令(英语):</string>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="cmdText"/>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>78</width>
+             <height>48</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addButton">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 170, 255)</string>
+           </property>
+           <property name="text">
+            <string>添加</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnButton">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(170, 255, 255)</string>
+           </property>
+           <property name="text">
+            <string>返回</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>

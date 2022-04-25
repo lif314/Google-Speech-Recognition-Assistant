@@ -1,18 +1,19 @@
-from PySide2.QtWidgets import QApplication, QFileDialog
+from PySide2.QtWidgets import QFileDialog
 from PySide2.QtUiTools import QUiLoader
 
-from CmdAppDatabase import add_to_file
+from cmdAppDatabase import add_to_file
 
 """
 添加 cmd_apppath关联关系的界面
 """
 
-class AddCmd_App:
+class AddView:
     def __init__(self):
         self.ui = QUiLoader().load("./ui/add.ui")
 
         self.ui.pathButton.clicked.connect(self.open_file)
         self.ui.addButton.clicked.connect(self.add)
+        # self.ui.returnButton.clicked.connect(self.to_main_view)
 
 
     # 选择文件
@@ -28,8 +29,12 @@ class AddCmd_App:
         # print(cmd, exe_path)
         add_to_file(cmd, exe_path)
 
+    # def to_main_view(self):
+    #     self.mainui = MainView()
+    #     self.mainui.ui.show()
+    #     self.ui.close()
 
-app = QApplication([])
-add = AddCmd_App()
-add.ui.show()
-app.exec_()
+# app = QApplication([])
+# add = AddCmd_App()
+# add.ui.show()
+# app.exec_()
