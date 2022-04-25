@@ -74,8 +74,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Voice Assistant"))
-        self.label_3.setText(_translate("MainWindow", "1. Enjoy music by saying \'Play music\'"))
+        self.label_3.setText(_translate("MainWindow", "1. Enjoy music by saying 'Play music'"))
         self.label_2.setText(_translate("MainWindow", "You can:"))
         self.label.setText(_translate("MainWindow", "Hi! How can I help?"))
-        self.label_4.setText(_translate("MainWindow", "2. Take some notes by saying \'Open Notepad\'"))
+        self.label_4.setText(_translate("MainWindow", "2. Take some notes by saying 'Open Notepad'"))
 

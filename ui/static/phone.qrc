@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="phone">
+    <file>phone.png</file>
+  </qresource>
+</RCC>

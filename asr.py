@@ -13,6 +13,8 @@ class myWindow(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+
+
 app = QtWidgets.QApplication([])
 application = myWindow()
 application.show()

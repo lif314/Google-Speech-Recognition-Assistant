@@ -74,8 +74,10 @@ def recognizeByGoogleCloud():
         print("Could not request results from Google Cloud Speech service; {0}".format(e))
 
 
+# 打开应用程序
 def open_app(app_dir):
     os.startfile(app_dir)
+
 
 if __name__ == "__main__":
     start = time.time()
