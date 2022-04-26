@@ -2,9 +2,11 @@
 
 ## Open windows applications
 - main view
+
 ![img.png](ui/img/img.png)
 
 - bounding cmd to exe
+
 ![img.png](ui/img/img3.png)
 
 - add
@@ -12,10 +14,12 @@
 ![img_1.png](ui/img/img_1.png)
 
 - text file: key->value
+
 ![img_2.png](ui/img/img_2.png)
 
 ## Play music
-just say "play music" or "music"
+- just say "play music" or "music"
+- say "stop" to exit the program
 
 ## How to run
 - clone
@@ -30,3 +34,4 @@ pip install -r requirements.txt
 ```shell
 python main.py
 ```
+
