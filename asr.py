@@ -18,6 +18,7 @@ class Asr:
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Say something!")
+            r.adjust_for_ambient_noise(source)  # we only need to calibrate once, before we start listening
             return r, r.listen(source)
 
 

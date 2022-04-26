@@ -1,3 +1,4 @@
+import os
 import sys
 from threading import Thread
 
@@ -52,8 +53,6 @@ def start_view():
     app.exec_()
 
 
-
-
 if __name__ == '__main__':
     view_thread = Thread(target=start_view)
     # 语音监听
@@ -72,14 +71,20 @@ if __name__ == '__main__':
         res = asr.recognizeByGoogle()
         print("识别结果：", res)
         res = res.lower()
-        if res.find("quit") >= 0:
-            sys.exit(0)
+        if res.find("stop") >= 0:
+            os._exit(0)
+            # sys.exit(1)
         elif res.find("music") >= 0:
-            cmdExecutor.play_music()
+            # 新建一个线程进行处理
+            music_thread = Thread(target=cmdExecutor.play_music)
+            music_thread.start()
+            continue
+            # cmdExecutor.play_music()
         elif res in cmds:
             for cmd in cmds:
                 if(res == cmd):
-                    cmdExecutor.open_app(dic.get(cmd))
+                    open_thread = Thread(target=cmdExecutor.open_app(dic.get(cmd)))
+                    open_thread.start()
                     break
         else:
             continue

@@ -22,4 +22,5 @@ class MainView:
 
     # 查询音乐播放列表
     def search_music(self):
-        print("查询音乐播放列表")
+        self.ui.musicTextEdit.setPlainText("晴天.mp3")
+        # print("查询音乐播放列表")

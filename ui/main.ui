@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>562</width>
-    <height>317</height>
+    <width>665</width>
+    <height>392</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,6 +22,13 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#00aaff;&quot;&gt;Can I help you?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;- &amp;quot;music&amp;quot;: play music &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;- &amp;quot;stop&amp;quot;: exit the program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
@@ -63,7 +70,11 @@
             </layout>
            </item>
            <item>
-            <widget class="QPlainTextEdit" name="cmdTextEdit"/>
+            <widget class="QPlainTextEdit" name="cmdTextEdit">
+             <property name="placeholderText">
+              <string>打开应用程序的语音命令</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -99,7 +110,11 @@
             </layout>
            </item>
            <item>
-            <widget class="QPlainTextEdit" name="musicTextEdit"/>
+            <widget class="QPlainTextEdit" name="musicTextEdit">
+             <property name="placeholderText">
+              <string>歌曲列表</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -114,10 +129,6 @@
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="static/phone.qrc"/>
-  <include location="static/voice.qrc"/>
-  <include location="static/play.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
