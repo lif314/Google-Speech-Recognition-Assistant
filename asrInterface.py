@@ -2,12 +2,13 @@
 
 # Form implementation generated from reading ui file 'asrInterface.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.10.3
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QMovie
+from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtGui import QMovie
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -20,18 +21,18 @@ class Ui_MainWindow(object):
         self.label_3.setGeometry(QtCore.QRect(60, 280, 201, 51))
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(14)
+        font.setPointSize(10)
         self.label_3.setFont(font)
-        self.label_3.setStyleSheet("color: rgb(0, 117, 210);")
+        self.label_3.setStyleSheet("color: rgb(0, 107, 210);")
         self.label_3.setWordWrap(True)
         self.label_3.setObjectName("label_3")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(60, 250, 201, 21))
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(14)
+        font.setPointSize(10)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("color: rgb(0, 117, 210);")
+        self.label_2.setStyleSheet("color: rgb(0, 107, 210);")
         self.label_2.setWordWrap(True)
         self.label_2.setObjectName("label_2")
         self.voiceFig = QtWidgets.QLabel(self.centralwidget)
@@ -47,10 +48,10 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(70, 160, 161, 21))
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(14)
+        font.setPointSize(10)
         font.setStyleStrategy(QtGui.QFont.PreferAntialias)
         self.label.setFont(font)
-        self.label.setStyleSheet("color: rgb(0, 117, 210);")
+        self.label.setStyleSheet("color: rgb(0, 107, 210);")
         self.label.setTextFormat(QtCore.Qt.AutoText)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
@@ -58,7 +59,7 @@ class Ui_MainWindow(object):
         self.label_4.setGeometry(QtCore.QRect(60, 330, 201, 51))
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(14)
+        font.setPointSize(10)
         self.label_4.setFont(font)
         self.label_4.setStyleSheet("color: rgb(0, 117, 210);")
         self.label_4.setWordWrap(True)
@@ -79,3 +80,17 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Hi! How can I help?"))
         self.label_4.setText(_translate("MainWindow", "2. Take some notes by saying 'Open Notepad'"))
 
+
+class myWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(myWindow, self).__init__()
+        self.myCommand = " "
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+
+if __name__ == '__main__':
+    app = QtWidgets.QApplication([])
+    application = myWindow()
+    application.show()
+    app.exec_()

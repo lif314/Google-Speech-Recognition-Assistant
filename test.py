@@ -1,4 +1,3 @@
-
 import speech_recognition as sr
 import time
 import os
