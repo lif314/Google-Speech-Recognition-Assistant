@@ -1,7 +1,10 @@
-from PySide2.QtWidgets import QApplication, QFileDialog
+from threading import Thread
+
 from PySide2.QtUiTools import QUiLoader
+from PySide2.QtMultimedia import QMediaPlayer
 
 from cmdAppDatabase import get_as_dic
+from cloudMusic import NeteaseCloudMusicApi
 
 
 class MainView:
@@ -22,5 +25,14 @@ class MainView:
 
     # 查询音乐播放列表
     def search_music(self):
-        self.ui.musicTextEdit.setPlainText("晴天.mp3")
+        def threadFunc():
+            musicApi = NeteaseCloudMusicApi()
+            songs = musicApi.get_new_songs_details()
+            names = ""
+            for song in songs:
+                names = names + song['name'] + "\n"
+            self.ui.musicTextEdit.setPlainText(names)
+        music_thread = Thread(target=threadFunc)
+        music_thread.start()
+
         # print("查询音乐播放列表")
