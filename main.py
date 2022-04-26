@@ -52,6 +52,8 @@ def start_view():
     app.exec_()
 
 
+
+
 if __name__ == '__main__':
     view_thread = Thread(target=start_view)
     # 语音监听
@@ -59,7 +61,7 @@ if __name__ == '__main__':
     try:
         view_thread.start()
     except:
-        print("界面处理失败")
+        print("界面处理失败!")
 
     # 获取app cmds
     dic = get_as_dic()
@@ -69,12 +71,15 @@ if __name__ == '__main__':
     while True:
         res = asr.recognizeByGoogle()
         print("识别结果：", res)
-        if res.find("quit"):
+        res = res.lower()
+        if res.find("quit") >= 0:
             sys.exit(0)
-
-        if res.find("music"):
+        elif res.find("music") >= 0:
             cmdExecutor.play_music()
-        else:
+        elif res in cmds:
             for cmd in cmds:
                 if(res == cmd):
                     cmdExecutor.open_app(dic.get(cmd))
+                    break
+        else:
+            continue
