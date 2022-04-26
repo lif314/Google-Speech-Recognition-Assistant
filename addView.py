@@ -28,13 +28,3 @@ class AddView:
         exe_path = self.ui.pathEdit.text()
         # print(cmd, exe_path)
         add_to_file(cmd, exe_path)
-
-    # def to_main_view(self):
-    #     self.mainui = MainView()
-    #     self.mainui.ui.show()
-    #     self.ui.close()
-
-# app = QApplication([])
-# add = AddCmd_App()
-# add.ui.show()
-# app.exec_()

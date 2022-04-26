@@ -36,7 +36,6 @@ def open_app(app_dir):
     os.startfile(app_dir)
 
 
-
 if __name__ == '__main__':
     dic = get_as_dic()
     print(dic.keys())

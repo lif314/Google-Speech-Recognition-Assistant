@@ -81,6 +81,7 @@ def open_app(app_dir):
 
 if __name__ == "__main__":
     start = time.time()
-    open_app(notepad_dir)
+    recognizeByGoogle()
+    # open_app(notepad_dir)
     end = time.time()
     print("Time = ", end - start)
