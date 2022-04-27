@@ -246,7 +246,12 @@ def main():
     app = QtWidgets.QApplication([])
     gui = Music()
     gui.show()
-    sys.exit(app.exec_())
+    app.exec_()
+    # sys.exit(app.exec_())
 
 if __name__ == '__main__':
-    main()
+    # main()
+    app = QtWidgets.QApplication([])
+    gui = Music()
+    gui.show()
+    app.exec_()
