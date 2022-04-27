@@ -1,5 +1,7 @@
 #  Google Speech Recognition
 
+![img.png](ui/img/overview.png)
+
 ## Open windows applications
 - main view
 

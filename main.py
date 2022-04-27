@@ -76,6 +76,8 @@ if __name__ == '__main__':
     cmdExecutor = ExecuteCmds()
     while True:
         res = asr.recognizeByGoogle()
+        # TODO 实时显语音识别响应结果 respTextEdit
+        # view.mainView.ui.respTextEdit.setPlainText("识别结果：" + res)
         print("识别结果：", res)
         res = res.lower()
         if res.find("stop") >= 0:
