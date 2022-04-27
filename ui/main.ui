@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>478</width>
-    <height>473</height>
+    <width>669</width>
+    <height>645</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,8 +23,11 @@
    <layout class="QGridLayout" name="gridLayout" rowstretch="1,6,1" rowminimumheight="0,0,0">
     <item row="0" column="0">
      <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#00aaff;&quot;&gt;Can I help you?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;- &amp;quot;music&amp;quot;: play music &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;- &amp;quot;stop&amp;quot;: exit the program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#00aaff;&quot;&gt;Can I help you?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;- &amp;quot;music&amp;quot;: play music&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;- &amp;quot;stop&amp;quot;: exit the program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
@@ -34,6 +37,23 @@
        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
         <item>
          <widget class="QGroupBox" name="groupBox">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox  {
+    border: 1px solid gray;
+    border-color: #FF17365D;
+    margin-top: 27px;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 8000px 5px 8000px;
+    background-color: rgb(170, 255, 255);
+    color: rgb(0, 0, 255);
+}</string>
+          </property>
           <property name="title">
            <string>Open App</string>
           </property>
@@ -43,7 +63,7 @@
              <item>
               <widget class="QPushButton" name="searchButton">
                <property name="text">
-                <string>查询</string>
+                <string>search cmds</string>
                </property>
               </widget>
              </item>
@@ -63,7 +83,7 @@
              <item>
               <widget class="QPushButton" name="addButton">
                <property name="text">
-                <string>添加</string>
+                <string>add cmd</string>
                </property>
               </widget>
              </item>
@@ -72,7 +92,7 @@
            <item>
             <widget class="QPlainTextEdit" name="cmdTextEdit">
              <property name="placeholderText">
-              <string>打开应用程序的语音命令</string>
+              <string>Voice command to open an app</string>
              </property>
             </widget>
            </item>
@@ -81,6 +101,23 @@
         </item>
         <item>
          <widget class="QGroupBox" name="groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox  {
+    border: 1px solid gray;
+    border-color: #FF17365D;
+    margin-top: 27px;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 8000px 5px 8000px;
+    background-color: rgb(170, 255, 255);
+    color: rgb(0, 0, 255);
+}</string>
+          </property>
           <property name="title">
            <string>Play Music</string>
           </property>
@@ -90,7 +127,7 @@
              <item>
               <widget class="QPushButton" name="musicButton">
                <property name="text">
-                <string>查询</string>
+                <string>search</string>
                </property>
               </widget>
              </item>
@@ -110,7 +147,7 @@
              <item>
               <widget class="QPushButton" name="mediaButton">
                <property name="text">
-                <string>迷你播放器</string>
+                <string>mini player </string>
                </property>
               </widget>
              </item>
@@ -119,7 +156,7 @@
            <item>
             <widget class="QPlainTextEdit" name="musicTextEdit">
              <property name="placeholderText">
-              <string>歌曲列表</string>
+              <string>Song list</string>
              </property>
             </widget>
            </item>
@@ -135,6 +172,23 @@
     </item>
     <item row="2" column="0">
      <widget class="QGroupBox" name="groupBox_3">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox  {
+    border: 1px solid gray;
+    border-color: #FF17365D;
+    margin-top: 27px;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 8000px 5px 8000px;
+    background-color: #FF17365D;
+    color: rgb(255, 255, 255);
+}</string>
+      </property>
       <property name="title">
        <string>Google Speech Recognition Response</string>
       </property>
@@ -142,7 +196,7 @@
        <item>
         <widget class="QPlainTextEdit" name="respTextEdit">
          <property name="placeholderText">
-          <string># TODO: 实时显示语音识别的响应结果</string>
+          <string># TODO: Display the response results of speech recognition in real time</string>
          </property>
         </widget>
        </item>

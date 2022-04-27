@@ -1,6 +1,6 @@
-#  Google Speech Recognition
+#  Google Speech Recognition Assistant
 
-![img.png](ui/img/overview.png)
+![img_4.png](ui/img/img_4.png)
 
 ## Open windows applications
 - main view
@@ -9,19 +9,28 @@
 
 - bounding cmd to exe
 
-![img.png](ui/img/img3.png)
+![img_1.png](ui/img/img_1.png)
+
 
 - add
 
-![img_1.png](ui/img/img_1.png)
+![img_2.png](ui/img/img_2.png)
+
 
 - text file: key->value
 
-![img_2.png](ui/img/img_2.png)
+![img_3.png](ui/img/img_3.png)
+
+- Mini music
+
+![img_5.png](ui/img/img_5.png)
+
 
 ## Play music
+- don't use proxy
 - just say "play music" or "music"
 - say "stop" to exit the program
+- click "mini player" button
 
 ## How to run
 - clone
@@ -36,4 +45,3 @@ pip install -r requirements.txt
 ```shell
 python main.py
 ```
-
