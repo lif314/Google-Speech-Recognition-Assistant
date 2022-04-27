@@ -11,7 +11,7 @@ from mainView import MainView
 from asr import Asr
 from executeCmds import ExecuteCmds
 from cmdAppDatabase import get_as_dic
-from musicMedia import Music
+from musicView import Music
 
 """
 主程序
