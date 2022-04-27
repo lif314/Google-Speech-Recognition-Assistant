@@ -11,6 +11,7 @@ from mainView import MainView
 from asr import Asr
 from executeCmds import ExecuteCmds
 from cmdAppDatabase import get_as_dic
+from musicMedia import Music
 
 """
 主程序
@@ -25,9 +26,11 @@ class AsrView:
     def __init__(self):
         self.addView = AddView()
         self.mainView = MainView()
+        self.musicMedia = Music()
 
         self.addView.ui.returnButton.clicked.connect(self.to_main)
         self.mainView.ui.addButton.clicked.connect(self.to_add)
+        self.mainView.ui.mediaButton.clicked.connect(self.to_musicMedia)
         # self.mainView.ui.listenButton.clicked.connect(self.listen)
 
 
@@ -38,6 +41,10 @@ class AsrView:
     def to_add(self):
         self.addView.ui.show()
 
+    def to_musicMedia(self):
+        # TODO 子界面向主界面传入参数
+        # self.mainView.ui.musicTextEdit.setPlainText(self.musicMedia.cursong)
+        self.musicMedia.show()
     # def listen(self):
     #     # 子线程监听用户语音: 如果采用循环，会导致线程爆炸
     #     thread = Thread(target=asr.recognizeByGoogle)

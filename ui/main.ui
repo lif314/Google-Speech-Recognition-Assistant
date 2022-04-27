@@ -107,6 +107,13 @@
                </property>
               </spacer>
              </item>
+             <item>
+              <widget class="QPushButton" name="mediaButton">
+               <property name="text">
+                <string>迷你播放器</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>

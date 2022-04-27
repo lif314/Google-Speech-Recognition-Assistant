@@ -1,5 +1,6 @@
 from threading import Thread
 
+from PySide2.QtCore import QThread, Signal
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtMultimedia import QMediaPlayer
 
@@ -34,5 +35,4 @@ class MainView:
             self.ui.musicTextEdit.setPlainText(names)
         music_thread = Thread(target=threadFunc)
         music_thread.start()
-
         # print("查询音乐播放列表")
